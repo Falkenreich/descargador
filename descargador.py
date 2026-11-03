@@ -108,7 +108,7 @@ class App(Gtk.Window):
         fila = Gtk.Box(spacing=6); caja.pack_start(fila, False, False, 0)
         fila.pack_start(Gtk.Label(label="Guardar en:"), False, False, 0)
         self.carpeta = Gtk.FileChooserButton(title="Carpeta", action=Gtk.FileChooserAction.SELECT_FOLDER)
-        self.carpeta.set_filename(GLib.get_user_special_directory(GLib.UserDirectory.DIRECTORY_VIDEOS)
+        self.carpeta.set_filename(GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_VIDEOS)
                                   or os.path.expanduser("~"))
         fila.pack_start(self.carpeta, True, True, 0)
 
